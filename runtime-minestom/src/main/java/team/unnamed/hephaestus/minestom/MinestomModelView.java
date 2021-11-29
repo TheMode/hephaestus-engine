@@ -214,4 +214,9 @@ public class MinestomModelView
                 });
     }
 
+    @Override
+    public void remove() {
+        super.remove();
+        this.bones.values().forEach(Entity::remove);
+    }
 }
